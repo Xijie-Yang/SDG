@@ -1,0 +1,15 @@
+.PublicationContents a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.PublicationContents a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .PublicationContents p {
+    flex-direction: column;
+  }
+}

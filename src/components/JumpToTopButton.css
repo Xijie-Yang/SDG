@@ -1,0 +1,22 @@
+.JumpToTopButton button {
+  /* background-color: rgba(var(--color-button-background), 0.9); */
+  background-color: var(--color-jump-to-top-button-background);
+  color: var(--color-block-background);
+
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.JumpToTopButton button:hover {
+  text-decoration: none;
+}

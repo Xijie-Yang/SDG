@@ -1,0 +1,48 @@
+:root {
+  --color-text: #213547;
+  --color-page-background: #e4e7ea;
+  --color-block-background: #ffffff;
+  --color-link: #1a73e8;
+  --color-link-hover: #ffa733;
+  --color-button-background: #000000;
+  --color-button-background-hover: #383838;
+  --color-jump-to-top-button-background: #000000bb;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-text);
+  background-color: var(--color-page-background);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #ededed;
+    --color-page-background: #2e2e2e;
+    --color-block-background: #181818;
+    --color-link: #8ab4f8;
+    --color-link-hover: #f39c12;
+    --color-button-background: #ffffff;
+    --color-button-background-hover: #ccc;
+    --color-jump-to-top-button-background: #ffffffbb;
+  }
+}
+
+body {
+  /* avoid wide content with wide screen */
+  max-width: 800px;
+  /* auto center the element */
+  margin: 0 auto;
+  /* set default text alignment as center  */
+  text-align: center;
+  /* add padding to page */
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+html {
+  /* smoothly scroll to a position in the page using # in a tag, instead of abruptly jump there */
+  scroll-behavior: smooth;
+}

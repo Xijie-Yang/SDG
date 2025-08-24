@@ -1,0 +1,600 @@
+[
+    {
+        "name": "AnySplat",
+        "title": "AnySplat: Feed-forward 3D Gaussian Splatting from Unconstrained Views",
+        "source": "preprint",
+        "authors": [
+            "Lihan Jiang",
+            "Yucheng Mao",
+            "Linning Xu",
+            "Tao Lu",
+            "Kerui Ren",
+            "Yichen Jin",
+            "Xudong Xu",
+            "Mulin Yu",
+            "Jiangmiao Pang",
+            "Feng Zhao",
+            "Dahua Lin",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/anysplat/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2505.23716"
+            }
+        ],
+        "visual": "AnySplat.jpg",
+        "tldr": "We introduce AnySplat, a feed-forward network for novel-view synthesis from uncalibrated image collections in both sparse- and dense-view scenarios.",
+        "abstract": "We introduce AnySplat, a feed-forward network for novel-view synthesis from uncalibrated image collections. In contrast to traditional neural-rendering pipelines that demand known camera poses and per-scene optimization, or recent feed-forward methods that buckle under the computational weight of dense views—our model predicts everything in one shot. A single forward pass yields a set of 3D Gaussian primitives encoding both scene geometry and appearance, and the corresponding camera intrinsics and extrinsics for each input image. This unified design scales effortlessly to casually captured, multi-view datasets without any pose annotations. In extensive zero-shot evaluations, AnySplat matches the quality of pose-aware baselines in both sparse- and dense-view scenarios while surpassing existing pose-free approaches. Moreover, it greatly reduce rendering latency compared to optimization-based neural fields, bringing real-time novel-view synthesis within reach for unconstrained capture settings. "
+    },
+    {
+        "name": "MV-CoLight",
+        "title": "MV-CoLight: Efficient Object Compositing with Consistent Lighting and Shadow Generation",
+        "source": "preprint",
+        "authors": [
+            "Kerui Ren",
+            "Jiayang Bai",
+            "Linning Xu",
+            "Lihan Jiang",
+            "Jiangmiao Pang",
+            "Mulin Yu",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/mvcolight"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2505.21483"
+            }
+        ],
+        "visual": "MV-CoLight.jpg",
+        "tldr": "We introduce MV-CoLight, a two-stage framework for illumination-consistent object compositing in both 2D images and 3D scenes.",
+        "abstract": "Object compositing offers significant promise for augmented reality (AR) and embodied intelligence applications. Existing approaches predominantly focus on single-image scenarios or intrinsic decomposition techniques, facing challenges with multi-view consistency, complex scenes, and diverse lighting conditions. Recent inverse rendering advancements, such as 3D Gaussian and diffusion-based methods, have enhanced consistency but are limited by scalability, heavy data requirements, or prolonged reconstruction time per scene. To broaden its applicability, we introduce MV-CoLight, a two-stage framework for illumination-consistent object compositing in both 2D images and 3D scenes. Our novel feed-forward architecture models lighting and shadows directly, avoiding the iterative biases of diffusion-based methods. We employ a Hilbert curve-based mapping to align 2D image inputs with 3D Gaussian scene representations seamlessly. To facilitate training and evaluation, we further introduce a large-scale 3D compositing dataset. Experiments demonstrate state-of-the-art harmonized results across standard benchmarks and our dataset, as well as casually captured real-world scenes demonstrate the framework's robustness and wide generalization."
+    },
+    {
+        "name": "HaloGS",
+        "title": "HaloGS: Loose Coupling of Compact Geometry and Gaussian Splats for 3D Scenes",
+        "source": "preprint",
+        "authors": [
+            "Changjian Jiang",
+            "Kerui Ren",
+            "Linning Xu",
+            "Jiong Chen",
+            "Jiangmiao Pang",
+            "Yu Zhang",
+            "Bo Dai",
+            "Mulin Yu"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/halogs/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2505.20267"
+            }
+        ],
+        "visual": "HaloGS.jpg",
+        "tldr": "We introduce HaloGS, a dual-representation that loosely couples triangles for geometry with Gaussians for appearance, enabling high-fidelity rendering with compact geometry.",
+        "abstract": "High fidelity 3D reconstruction and rendering hinge on capturing precise geometry while preserving photo realistic detail. Most existing methods either fuse these goals into a single cumbersome model or adopt hybrid schemes whose uniform primitives lead to a trade off between efficiency and fidelity. In this paper, we introduce HaloGS, a dual representation that loosely couples coarse triangles for geometry with Gaussian primitives for appearance, motivated by the lightweight classic geometry representations and their proven efficiency in real world applications. Our design yields a compact yet expressive model capable of photo realistic rendering across both indoor and outdoor environments, seamlessly adapting to varying levels of scene complexity. Experiments on multiple benchmark datasets demonstrate that our method yields both compact, accurate geometry and high fidelity renderings, especially in challenging scenarios where robust geometric structure make a clear difference."
+    },
+    {
+        "name": "V3DG",
+        "title": "Virtualized 3D Gaussians: Flexible Cluster-based Level-of-Detail System for Real-Time Rendering of Composed Scenes",
+        "source": "SIGGRAPH 2025",
+        "authors": [
+            "Xijie Yang",
+            "Linning Xu",
+            "Lihan Jiang",
+            "Dahua Lin",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://xijie-yang.github.io/V3DG/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2505.06523"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/city-super/V3DG"
+            },
+            {
+                "name": "Video",
+                "url": "https://www.youtube.com/watch?v=K0J5ePcWyrg"
+            }
+        ],
+        "visual": "V3DG.jpg",
+        "tldr": "V3DG achieves real-time rendering of massive 3D Gaussians in large, composed scenes through a novel LOD approach.",
+        "abstract": "3D Gaussian Splatting (3DGS) enables the reconstruction of intricate digital 3D assets from multi-view images by leveraging a set of 3D Gaussian primitives for rendering. Its explicit and discrete representation facilitates the seamless composition of complex digital worlds, offering significant advantages over previous neural implicit methods. However, when applied to large-scale compositions, such as crowd-level scenes, it can encompass numerous 3D Gaussians, posing substantial challenges for real-time rendering. To address this, inspired by Unreal Engine 5's Nanite system, we propose Virtualized 3D Gaussians (V3DG), a cluster-based LOD solution that constructs hierarchical 3D Gaussian clusters and dynamically selects only the necessary ones to accelerate rendering speed. Our approach consists of two stages: (1) Offline Build, where hierarchical clusters are generated using a local splatting method to minimize visual differences across granularities, and (2) Online Selection, where footprint evaluation determines perceptible clusters for efficient rasterization during rendering. We curate a dataset of synthetic and real-world scenes, including objects, trees, people, and buildings, each requiring 0.1 billion 3D Gaussians to capture fine details. Experiments show that our solution balances rendering efficiency and visual quality across user-defined tolerances, facilitating downstream interactive applications that compose extensive 3DGS assets for consistent rendering performance."
+    },
+    {
+        "name": "ObjectGS",
+        "title": "ObjectGS: Object-aware Scene Reconstruction and Scene Understanding via Gaussian Splatting",
+        "authors": [
+            "Ruijie Zhu",
+            "Mulin Yu",
+            "Linning Xu",
+            "Lihan Jiang",
+            "Yixuan Li",
+            "Tianzhu Zhang",
+            "Jiangmiao Pang",
+            "Bo Dai"
+        ],
+        "source": "ICCV 2025",
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://ruijiezhu94.github.io/ObjectGS_page/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2507.15454"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/RuijieZhu94/ObjectGS"
+            }
+        ],
+        "visual": "ObjectGS.jpg",
+        "tldr": "We propose ObjectGS, an object-aware Gaussian Splatting framework that unifies 3D scene reconstruction with semantic understanding in open-world scenes.",
+        "abstract": "3D Gaussian Splatting is renowned for its high-fidelity reconstructions and real-time novel view synthesis, yet its lack of semantic understanding limits object-level perception. In this work, we propose ObjectGS, an object-aware framework that unifies 3D scene reconstruction with semantic understanding. Instead of treating the scene as a unified whole, ObjectGS models individual objects as local anchors that generate neural Gaussians and share object IDs, enabling precise object-level reconstruction. During training, we dynamically grow or prune these anchors and optimize their features, while a one-hot ID encoding with a classification loss enforces clear semantic constraints. We show through extensive experiments that ObjectGS not only outperforms state-of-the-art methods on open-vocabulary and panoptic segmentation tasks, but also integrates seamlessly with applications like mesh extraction and scene editing."
+    },
+    {
+        "name": "GausSim",
+        "title": "GausSim: Foreseeing Reality by Gaussian Simulator for Elastic Objects",
+        "source": "preprint",
+        "authors": [
+            "Yidi Shao",
+            "Mu Huang",
+            "Chen Change Loy",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://www.mmlab-ntu.com/project/gausim/index.html"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2412.17804"
+            }
+        ],
+        "visual": "GausSim.jpg",
+        "tldr": "GausSim is a neural simulator for elastic objects using Gaussian kernels and physics-based constraints, enabling efficient, realistic, and interpretable dynamic simulations with a new validation dataset, READY.",
+        "abstract": "We introduce GausSim, a novel neural network-based simulator designed to capture the dynamic behaviors of real-world elastic objects represented through Gaussian kernels. We leverage continuum mechanics and treat each kernel as a Center of Mass System (CMS) that represents continuous piece of matter, accounting for realistic deformations without idealized assumptions. To improve computational efficiency and fidelity, we employ a hierarchical structure that further organizes kernels into CMSs with explicit formulations, enabling a coarse-to-fine simulation approach. This structure significantly reduces computational overhead while preserving detailed dynamics. In addition, GausSim incorporates explicit physics constraints, such as mass and momentum conservation, ensuring interpretable results and robust, physically plausible simulations. To validate our approach, we present a new dataset, READY, containing multi-view videos of real-world elastic deformations. Experimental results demonstrate that GausSim achieves superior performance compared to existing physics-driven baselines, offering a practical and accurate solution for simulating complex dynamic behaviors."
+    },
+    {
+        "name": "Proc-GS",
+        "title": "Proc-GS: Procedural Building Generation for City Assembly with 3D Gaussians",
+        "source": "preprint",
+        "authors": [
+            "Yixuan Li",
+            "Xingjian Ran",
+            "Linning Xu",
+            "Tao Lu",
+            "Mulin Yu",
+            "Zhenzhi Wang",
+            "Yuanbo Xiangli",
+            "Dahua Lin",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/procgs"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2412.07660"
+            }
+        ],
+        "visual": "Proc-GS.jpg",
+        "tldr": "Proc-GS merges procedural modeling with 3D Gaussian Splatting to efficiently generate high-fidelity, scalable buildings with minimal manual effort.",
+        "abstract": "Buildings are primary components of cities, often featuring repeated elements such as windows and doors. Traditional 3D building asset creation is labor-intensive and requires specialized skills to develop design rules. Recent generative models for building creation often overlook these patterns, leading to low visual fidelity and limited scalability. Drawing inspiration from procedural modeling techniques used in the gaming and visual effects industry, our method, Proc-GS, integrates procedural code into the 3D Gaussian Splatting (3D-GS) framework, leveraging their advantages in high-fidelity rendering and efficient asset management from both worlds. By manipulating procedural code, we can streamline this process and generate an infinite variety of buildings. This integration significantly reduces model size by utilizing shared foundational assets, enabling scalable generation with precise control over building assembly. We showcase the potential for expansive cityscape generation while maintaining high rendering fidelity and precise control on both real and synthetic cases."
+    },
+    {
+        "name": "Horizon-GS",
+        "title": "Horizon-GS: Unified 3D Gaussian Splatting for Large-Scale Aerial-to-Ground Scenes",
+        "source": "CVPR 2025",
+        "authors": [
+            "Lihan Jiang",
+            "Kerui Ren",
+            "Mulin Yu",
+            "Linning Xu",
+            "Junting Dong",
+            "Tao Lu",
+            "Feng Zhao",
+            "Dahua Lin",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/horizon-gs/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2412.01745"
+            },
+            {
+                "name": "Paper (open access)",
+                "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Jiang_Horizon-GS_Unified_3D_Gaussian_Splatting_for_Large-Scale_Aerial-to-Ground_Scenes_CVPR_2025_paper.html"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/OpenRobotLab/HorizonGS"
+            }
+        ],
+        "visual": "Horizon-GS.jpg",
+        "tldr": "We introduce Horizon-GS, tackles the unified reconstruction and rendering for aerial and street views with a new training strategy, overcoming viewpoint discrepancies to generate high-fidelity scenes.",
+        "abstract": "Seamless integration of both aerial and street view images remains a significant challenge in neural scene reconstruction and rendering. Existing methods predominantly focus on single domain, limiting their applications in immersive environments, which demand extensive free view exploration with large view changes both horizontally and vertically. We introduce Horizon-GS, a novel approach built upon Gaussian Splatting techniques, tackles the unified reconstruction and rendering for aerial and street views. Our method addresses the key challenges of combining these perspectives with a new training strategy, overcoming viewpoint discrepancies to generate high-fidelity scenes. We also curate a high-quality aerial-to-ground views dataset encompassing both synthetic and real-world scene to advance further research. Experiments across diverse urban scene datasets confirm the effectiveness of our method."
+    },
+    {
+        "name": "Octree-GS",
+        "title": "Octree-GS: Towards Consistent Real-time Rendering with LOD-Structured 3D Gaussians",
+        "source": "TPAMI 2025",
+        "authors": [
+            "Kerui Ren",
+            "Lihan Jiang",
+            "Tao Lu",
+            "Mulin Yu",
+            "Linning Xu",
+            "Zhangkai Ni",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/octree-gs/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2403.17898"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://doi.org/10.1109/TPAMI.2025.3568201"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/city-super/Octree-GS"
+            }
+        ],
+        "visual": "Octree-GS.jpg",
+        "tldr": "We introduce Octree-GS, featuring an LOD-structured 3D Gaussian approach supporting level-of-detail decomposition for scene representation that contributes to the final rendering results.",
+        "abstract": "The recent 3D Gaussian splatting (3D-GS) has shown remarkable rendering fidelity and efficiency compared to NeRF-based neural scene representations. While demonstrating the potential for real-time rendering, 3D-GS encounters rendering bottlenecks in large scenes with complex details due to an excessive number of Gaussian primitives located within the viewing frustum. This limitation is particularly noticeable in zoom-out views and can lead to inconsistent rendering speeds in scenes with varying details. Moreover, it often struggles to capture the corresponding level of details at different scales with its heuristic density control operation. Inspired by the Level-of-Detail (LOD) techniques, we introduce Octree-GS, featuring an LOD-structured 3D Gaussian approach supporting level-of-detail decomposition for scene representation that contributes to the final rendering results. Our model dynamically selects the appropriate level from the set of multi-resolution anchor points, ensuring consistent rendering performance with adaptive LOD adjustments while maintaining high-fidelity rendering results."
+    },
+    {
+        "name": "GSDF",
+        "title": "GSDF: 3DGS Meets SDF for Improved Rendering and Reconstruction",
+        "source": "NeurIPS 2024",
+        "authors": [
+            "Mulin Yu",
+            "Tao Lu",
+            "Linning Xu",
+            "Lihan Jiang",
+            "Yuanbo Xiangli",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/GSDF/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2403.16964"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/ea13534ee239bb3977795b8cc855bacc-Abstract-Conference.html"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/city-super/GSDF"
+            }
+        ],
+        "visual": "GSDF.jpg",
+        "tldr": "We introduce GSDF, a dual-branch architecture that combines the benefits of 3D Gaussian Splatting (3DGS) with neural Signed Distance Fields (SDF) to boost both rendering and reconstruction quality.",
+        "abstract": "Presenting a 3D scene from multiview images remains a core and long-standing challenge in computer vision and computer graphics. Two main requirements lie in rendering and reconstruction. Notably, SOTA rendering quality is usually achieved with neural volumetric rendering techniques, which rely on aggregated point/primitive-wise color and neglect the underlying scene geometry. Learning of neural implicit surfaces is sparked from the success of neural rendering. Current works either constrain the distribution of density fields or the shape of primitives, resulting in degraded rendering quality and flaws on the learned scene surfaces. The efficacy of such methods is limited by the inherent constraints of the chosen neural representation, which struggles to capture fine surface details, especially for larger, more intricate scenes. To address these issues, we introduce GSDF, a novel dual-branch architecture that combines the benefits of a flexible and efficient 3D Gaussian Splatting (3DGS) representation with neural Signed Distance Fields (SDF). The core idea is to leverage and enhance the strengths of each branch while alleviating their limitation through mutual guidance and joint supervision. We show on diverse scenes that our design unlocks the potential for more accurate and detailed surface reconstructions, and at the meantime benefits 3DGS rendering with structures that are more aligned with the underlying geometry."
+    },
+    {
+        "name": "Scaffold-GS",
+        "title": "Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering",
+        "source": "CVPR 2024",
+        "authors": [
+            "Tao Lu",
+            "Mulin Yu",
+            "Linning Xu",
+            "Yuanbo Xiangli",
+            "Limin Wang",
+            "Dahua Lin",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/scaffold-gs/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2312.00109"
+            },
+            {
+                "name": "Paper (open access)",
+                "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Lu_Scaffold-GS_Structured_3D_Gaussians_for_View-Adaptive_Rendering_CVPR_2024_paper.html"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://doi.org/10.1109/CVPR52733.2024.01952"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/city-super/Scaffold-GS"
+            }
+        ],
+        "visual": "Scaffold-GS.jpg",
+        "tldr": "We introduce Scaffold-GS, which uses anchor points to distribute local 3D Gaussians, and predicts their attributes on-the-fly based on viewing direction and distance within the view frustum.",
+        "abstract": "Neural rendering methods have significantly advanced photo-realistic 3D scene rendering in various academic and industrial applications. The recent 3D Gaussian Splatting method has achieved the state-of-the-art rendering quality and speed combining the benefits of both primitive-based representations and volumetric representations. However, it often leads to heavily redundant Gaussians that try to fit every training view, neglecting the underlying scene geometry. Consequently, the resulting model becomes less robust to significant view changes, texture-less area and lighting effects. We introduce Scaffold-GS, which uses anchor points to distribute local 3D Gaussians, and predicts their attributes on-the-fly based on viewing direction and distance within the view frustum. Anchor growing and pruning strategies are developed based on the importance of neural Gaussians to reliably improve the scene coverage. We show that our method effectively reduces redundant Gaussians while delivering high-quality rendering. We also demonstrates an enhanced capability to accommodate scenes with varying levels-of-detail and view-dependent observations, without sacrificing the rendering speed."
+    },
+    {
+        "name": "MatrixCity",
+        "title": "MatrixCity: A Large-scale City Dataset for City-scale Neural Rendering and Beyond",
+        "source": "ICCV 2023",
+        "authors": [
+            "Yixuan Li",
+            "Lihan Jiang",
+            "Linning Xu",
+            "Yuanbo Xiangli",
+            "Zhenzhi Wang",
+            "Dahua Lin",
+            "Bo Dai"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/matrixcity/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2309.16553"
+            },
+            {
+                "name": "Paper (open access)",
+                "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Li_MatrixCity_A_Large-scale_City_Dataset_for_City-scale_Neural_Rendering_and_ICCV_2023_paper.html"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://doi.org/10.1109/ICCV51070.2023.00297"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/city-super/MatrixCity"
+            },
+            {
+                "name": "Data (Hugging Face)",
+                "url": "https://huggingface.co/datasets/BoDai/MatrixCity/tree/main"
+            },
+            {
+                "name": "Data (OpenXLab)",
+                "url": "https://openxlab.org.cn/datasets/bdaibdai/MatrixCity"
+            },
+            {
+                "name": "Data (Baidu NetDisk)",
+                "url": "https://pan.baidu.com/s/187P0e5p1hz9t5mgdJXjL1g?pwd=hqnn"
+            }
+        ],
+        "visual": "MatrixCity.jpg",
+        "tldr": "MatrixCity is a large-scale synthetic dataset enabling city-scale neural rendering, offering 410k images with ground-truth data and environmental controls to support diverse research and benchmarking.",
+        "abstract": "Neural radiance fields (NeRF) and its subsequent variants have led to remarkable progress in neural rendering. While most of recent neural rendering works focus on objects and small-scale scenes, developing neural rendering methods for city-scale scenes is of great potential in many real-world applications. However, this line of research is impeded by the absence of a comprehensive and high-quality dataset, yet collecting such a dataset over real city-scale scenes is costly, sensitive, and technically difficult. To this end, we build a large-scale, comprehensive, and high-quality synthetic dataset for city-scale neural rendering researches. Leveraging the Unreal Engine 5 City Sample project, we develop a pipeline to easily collect aerial and street city views, accompanied by ground-truth camera poses and a range of additional data modalities. Flexible controls over environmental factors like light, weather, human and car crowd are also available in our pipeline, supporting the need of various tasks covering city-scale neural rendering and beyond. The resulting pilot dataset, MatrixCity, contains 67k aerial images and 452k street images from two city maps of total size 28km2. On top of MatrixCity, a thorough benchmark is also conducted, which not only reveals unique challenges of the task of city-scale neural rendering, but also highlights potential improvements for future works."
+    },
+    {
+        "name": "GridNeRF",
+        "title": "Grid-guided Neural Radiance Fields for Large Urban Scenes",
+        "source": "CVPR 2023",
+        "authors": [
+            "Linning Xu",
+            "Yuanbo Xiangli",
+            "Sida Peng",
+            "Xingang Pan",
+            "Nanxuan Zhao",
+            "Christian Theobalt",
+            "Bo Dai",
+            "Dahua Lin"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/gridnerf/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2303.14001"
+            },
+            {
+                "name": "Paper (open access)",
+                "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Xu_Grid-Guided_Neural_Radiance_Fields_for_Large_Urban_Scenes_CVPR_2023_paper.html"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://doi.org/10.1109/CVPR52729.2023.00802"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/InternLandMark/LandMark"
+            },
+            {
+                "name": "LandMark Project",
+                "url": "https://landmark.intern-ai.org.cn/"
+            },
+            {
+                "name": "News (WAIC 2023, in Chinese)",
+                "url": "https://www.shlab.org.cn/news/5443429"
+            },
+            {
+                "name": "Video",
+                "url": "https://www.youtube.com/watch?v=uZxSnX5nXd4"
+            }
+        ],
+        "visual": "GridNeRF.jpg",
+        "tldr": "We propose a hybrid framework combining multiresolution ground feature planes with a lightweight NeRF branch to enable efficient, high-fidelity rendering of large urban scenes",
+        "abstract": "Purely MLP-based neural radiance fields (NeRF-based methods) often suffer from underfitting with blurred renderings on large-scale scenes due to limited model capacity. Recent approaches propose to geographically divide the scene and adopt multiple sub-NeRFs to model each region individually, leading to linear scale-up in training costs and the number of sub-NeRFs as the scene expands. An alternative solution is to use a feature grid representation, which is computationally efficient and can naturally scale to a large scene with increased grid resolutions. However, the feature grid tends to be less constrained and often reaches suboptimal solutions, producing noisy artifacts in renderings, especially in regions with complex geometry and texture. In this work, we present a new framework that realizes high-fidelity rendering on large urban scenes while being computationally efficient. We propose to use a compact multiresolution ground feature plane representation to coarsely capture the scene, and complement it with positional encoding inputs through another NeRF branch for rendering in a joint learning fashion. We show that such an integration can utilize the advantages of two alternative solutions: a light-weighted NeRF is sufficient, under the guidance of the feature grid representation, to render photorealistic novel views with fine details; and the jointly optimized ground feature planes, can meanwhile gain further refinements, forming a more accurate and compact feature space and output much more natural rendering results."
+    },
+    {
+        "name": "AssetField",
+        "title": "AssetField: Assets Mining and Reconfiguration in Ground Feature Plane Representation",
+        "source": "ICCV 2023",
+        "authors": [
+            "Yuanbo Xiangli",
+            "Linning Xu",
+            "Xingang Pan",
+            "Nanxuan Zhao",
+            "Bo Dai",
+            "Dahua Lin"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/assetfield/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2303.13953"
+            },
+            {
+                "name": "Paper (open access)",
+                "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Xiangli_AssetField_Assets_Mining_and_Reconfiguration_in_Ground_Feature_Plane_Representation_ICCV_2023_paper.html"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://doi.org/10.1109/ICCV51070.2023.00301"
+            }
+        ],
+        "visual": "AssetField.jpg",
+        "tldr": "AssetField is a neural scene representation using object-aware ground feature planes and a learned asset library, enabling efficient editing and realistic rendering of structured environments.",
+        "abstract": "Both indoor and outdoor environments are inherently structured and repetitive. Traditional modeling pipelines keep an asset library storing unique object templates, which is both versatile and memory efficient in practice. Inspired by this observation, we propose AssetField, a novel neural scene representation that learns a set of object-aware ground feature planes to represent the scene, where an asset library storing template feature patches can be constructed in an unsupervised manner. Unlike existing methods which require object masks to query spatial points for object editing, our ground feature plane representation offers a natural visualization of the scene in the bird-eye view, allowing a variety of operations (e.g. translation, duplication, deformation) on objects to configure a new scene. With the template feature patches, group editing is enabled for scenes with many recurring items to avoid repetitive work on object individuals. We show that AssetField not only achieves competitive performance for novel-view synthesis but also generates realistic renderings for new scene configurations."
+    },
+    {
+        "name": "OmniCity",
+        "title": "OmniCity: Omnipotent City Understanding with Multi-level and Multi-view Images",
+        "source": "CVPR 2023",
+        "authors": [
+            "Weijia Li",
+            "Yawen Lai",
+            "Linning Xu",
+            "Yuanbo Xiangli",
+            "Jinhua Yu",
+            "Conghui He",
+            "Gui-Song Xia",
+            "Dahua Lin"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/omnicity/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2208.00928"
+            },
+            {
+                "name": "Paper (open access)",
+                "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Li_OmniCity_Omnipotent_City_Understanding_With_Multi-Level_and_Multi-View_Images_CVPR_2023_paper.html"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://doi.org/10.1109/CVPR52729.2023.01669"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/sysu-liweijia-lab/OmniCity-v1.0"
+            },
+            {
+                "name": "Data",
+                "url": "https://opendatalab.com/OpenDataLab/OmniCity"
+            }
+        ],
+        "visual": "OmniCity.jpg",
+        "tldr": "OmniCity is a large, richly annotated dataset of 100K+ multi-view images from NYC, enabling diverse city understanding tasks across satellite, panorama, and street-level views.",
+        "abstract": "This paper presents OmniCity, a new dataset for omnipotent city understanding from multi-level and multi-view images. More precisely, the OmniCity contains multi-view satellite images as well as street-level panorama and mono-view images, constituting over 100K pixel-wise annotated images that are well-aligned and collected from 25K geo-locations in New York City. To alleviate the substantial pixel-wise annotation efforts, we propose an efficient street-view image annotation pipeline that leverages the existing label maps of satellite view and the transformation relations between different views (satellite, panorama, and mono-view). With the new OmniCity dataset, we provide benchmarks for a variety of tasks including building footprint extraction, height estimation, and building plane/instance/fine-grained segmentation. Compared with the existing multi-level and multi-view benchmarks, OmniCity contains a larger number of images with richer annotation types and more views, provides more benchmark results of state-of-the-art models, and introduces a novel task for fine-grained building instance segmentation on street-level panorama images. Moreover, OmniCity provides new problem settings for existing tasks, such as cross-view image matching, synthesis, segmentation, detection, etc., and facilitates the developing of new methods for large-scale city understanding, reconstruction, and simulation."
+    },
+    {
+        "name": "BungeeNeRF",
+        "title": "BungeeNeRF: Progressive Neural Radiance Field for Extreme Multi-scale Scene Rendering",
+        "source": "ECCV 2022",
+        "authors": [
+            "Yuanbo Xiangli",
+            "Linning Xu",
+            "Xingang Pan",
+            "Nanxuan Zhao",
+            "Anyi Rao",
+            "Christian Theobalt",
+            "Bo Dai",
+            "Dahua Lin"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/citynerf/"
+            },
+            {
+                "name": "Paper (arXiv)",
+                "url": "https://arxiv.org/abs/2112.05504"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://doi.org/10.1007/978-3-031-19824-3_7"
+            },
+            {
+                "name": "Code",
+                "url": "https://github.com/city-super/BungeeNeRF"
+            }
+        ],
+        "visual": "BungeeNeRF.jpg",
+        "tldr": "BungeeNeRF enables high-quality, multi-scale rendering by progressively adding NeRF blocks and activating high-frequency details, effectively modeling scenes with drastically varying viewpoints.",
+        "abstract": "Neural radiance fields (NeRF) has achieved outstanding performance in modeling 3D objects and controlled scenes, usually under a single scale. In this work, we focus on multi-scale cases where large changes in imagery are observed at drastically different scales. This scenario vastly exists in real-world 3D environments, such as city scenes, with views ranging from satellite level that captures the overview of a city, to ground level imagery showing complex details of an architecture; and can also be commonly identified in landscape and delicate minecraft 3D models. The wide span of viewing positions within these scenes yields multi-scale renderings with very different levels of detail, which poses great challenges to neural radiance field and biases it towards compromised results. To address these issues, we introduce BungeeNeRF, a progressive neural radiance field that achieves level-of-detail rendering across drastically varied scales. Starting from fitting distant views with a shallow base block, as training progresses, new blocks are appended to accommodate the emerging details in the increasingly closer views. The strategy progressively activates high-frequency channels in NeRF's positional encoding inputs and successively unfolds more complex details as the training proceeds. We demonstrate the superiority of BungeeNeRF in modeling diverse multi-scale scenes with drastically varying views on multiple data sources (city models, synthetic, and drone captured data) and its support for high-quality rendering in different levels of detail."
+    },
+    {
+        "name": "BlockPlanner",
+        "title": "BlockPlanner: City Block Generation with Vectorized Graph Representation",
+        "source": "ICCV 2021",
+        "authors": [
+            "Linning Xu",
+            "Yuanbo Xiangli",
+            "Anyi Rao",
+            "Nanxuan Zhao",
+            "Bo Dai",
+            "Ziwei Liu",
+            "Dahua Lin"
+        ],
+        "links": [
+            {
+                "name": "Project Page",
+                "url": "https://city-super.github.io/blockplanner/"
+            },
+            {
+                "name": "Paper (open access)",
+                "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Xu_BlockPlanner_City_Block_Generation_With_Vectorized_Graph_Representation_ICCV_2021_paper.html"
+            },
+            {
+                "name": "Paper (publisher)",
+                "url": "https://doi.org/10.1109/ICCV48922.2021.00503"
+            }
+        ],
+        "visual": "BlockPlanner.jpg",
+        "tldr": "BlockPlanner is a generative model for synthesizing and editing city blocks using a novel vectorized representation and graph structure, enabling efficient, constraint-aware urban modeling.",
+        "abstract": "City modeling is the foundation for computational urban planning, navigation, and entertainment. In this work, we present the first generative model of city blocks named BlockPlanner, and showcase its ability to synthesize valid city blocks with varying land lots configurations. We propose a novel vectorized city block representation utilizing a ring topology and a two-tier graph to capture the global and local structures of a city block. Each land lot is abstracted into a vector representation covering both its 3D geometry and land use semantics. Such vectorized representation enables us to deploy a lightweight network to capture the underlying distribution of land lots configurations in a city block. To enforce intrinsic spatial constraints of a valid city block, a set of effective loss functions are imposed to shape rational results. We contribute a pilot city block dataset to demonstrate the effectiveness and efficiency of our representation and framework over the state-of-the-art. Notably, our BlockPlanner is also able to edit and manipulate city blocks, enabling several useful applications, e.g., topology refinement and footprint generation."
+    }
+]
